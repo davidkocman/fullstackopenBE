@@ -21,8 +21,9 @@ const app = express()
 // using middleware express.json()
 // middleware functions are called in the order that they're encountered by the JavaScript engine
 app.use(express.json())
-// app.use(morgan('tiny'))
-app.use(requestLogger)
+app.use(morgan('tiny'))
+// app.use(requestLogger)
+app.use(express.static('dist'))
 
 // ------------------------------------------------
 // root
